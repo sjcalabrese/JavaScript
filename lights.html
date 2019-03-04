@@ -4,24 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Buttons!!!!</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script>
-        function changeSize(){
-            document.getElementById('text').style.fontSize='30px';
-            document.getElementById('text').style.color='blue';
-
-        }
-    </script>
+    <script src="scripts/font.js"></script>   
+    
 </head>
 <body>
     <span id="text">Please push my buttons</span>
     <!--<button id="btnText" type="button onclick="document.getElementById('text').style.fontSize='30px';">Press me</button>-->
-    <button id="btnText" type="button" onclick="changeSize()">Press Me!</button>
+    <button id="btnText" type="button" onclick="changeFont()">Press Me!</button>
     <br>
     <hr>
     <button id="btnOff" type="button" onclick="document.getElementById('lights').src='images/bulbOff.png';">OFF</button>
     <img src="images/bulbOff.png" id="lights">
     <button id="btnOn" type="button" onclick="document.getElementById('lights').setAttribute('src', 'images/LightOn.jpg');" >ON</button>
+    
 </body>
 </html>
