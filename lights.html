@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Buttons!!!!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="main.js"></script>
 </head>
 <body>
-    <p id="text">Please push my buttons</p>
+    <span id="text">Please push my buttons</span>
     <button id="btnText" type="button" onclick="document.getElementById('text').style.fontSize='30px';">Press me</button>
     <br>
     <hr>
-    <button id="btnOff" type="button" onclick="document.getElementById('off').setAttribute('src', 'images/bulbOff.png');">OFF</button>
-    <img src="images/bulbOff.png" id="off">
-    <button id="btnOn" type="button" onclick="document.getElementById('off').setAttribute('src', 'images/LightOn.jpg');" >ON</button>
+    <button id="btnOff" type="button" onclick="document.getElementById('lights').src='images/bulbOff.png';">OFF</button>
+    <img src="images/bulbOff.png" id="lights">
+    <button id="btnOn" type="button" onclick="document.getElementById('lights').setAttribute('src', 'images/LightOn.jpg');" >ON</button>
 </body>
 </html>
