@@ -31,3 +31,12 @@ function test() {
     alert(x);
     alert(name);
 }
+
+function foom(){
+    let x=10;
+    alert(x);
+    {
+        var x= 15;
+    }
+    alert(x);
+}
