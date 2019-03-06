@@ -45,7 +45,7 @@ function whatPartOfTheWeekIsIt(){
 }
 
 function whatDayIsIt(){
-    var day = new Date().getDay()
+    var day = new Date().getDay();
 
     switch(day){
         case 1:
