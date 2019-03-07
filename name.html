@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    
     <script>
         function getFullName(){
             var fname=document.getElementById('fname').value;
@@ -15,12 +15,17 @@
             return alert(document.getElementById('fullname').innerHTML=fullname);
         }
     </script>
+    <style>
+        input:invalid{
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
     <label>FirstName: </label>
-    <input type="text" id="fname"/>
+    <input type="text" id="fname" required/>
     <labe>Last Name: </labe>
-    <input type="text" id="lname"/>
+    <input type="text" id="lname" required/>
     <p id="fullname"></p>
     <button type="button" onclick="getFullName()">get full name</button>
 </body>

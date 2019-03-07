@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Confirm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>JavaScript Confirm Box</h1>
+
+    <button type="button" onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+
+    <h1>Prompt Box</h1>
+    <button type="button" onclick="myPrompt()">Prompt me</button>
+    <p id="demo2"></p>
+
+    <script>
+        function myFunction(){
+            var txt;
+            if(confirm("Press a botton!")){
+                txt = "You pressed ok";
+            }else{
+                txt = "You pressed cancel";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+
+        function myPrompt(){
+            var txt;
+            var person = prompt("Please enter your name", "Harry Potter");
+            if(person == null || person == ""){
+                txt = "User canceled prompt"
+            }else{
+                txt = "Hello " + person + "! How are you today"
+            }
+            document.getElementById("demo2").innerHTML = txt;
+            }
+    </script>
+</body>
+</html>

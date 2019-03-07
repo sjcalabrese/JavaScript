@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function validateForm(){
+                var x = document.forms["myForm"]["fname"].value;
+                if(x == ''){
+                    alert("name must be filled");
+                    document.forms["myForm"]["fname"].title = "Please enter first Name";
+                    return false;
+                }
+            }
+            function resetTooltip(){
+                //alert("in reset()");
+                document.forms["myForm"]["fname"].title = "";
+            }    
+        </script>
+       
+    </head>
+
+    <body>
+        <form id="myForm" action="firstJS.html" onsubmit="return validateForm()" 
+         method="POST">
+            <label>First Name</label>
+            <input type="text" id="fname" onchange="resetTooltip()" placeholder="Please enter name">
+            <input type="submit">
+        </form>
+    </body>
+</html>
