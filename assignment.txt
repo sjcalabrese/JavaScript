@@ -1,0 +1,11 @@
+-create a game using html, css and javascript
+-use at lease 15 different html tags
+-write custom css, using at least 3 different types of selectors
+-using JS, implement at least 2 even listeners
+-using JS, query and manipulate the DOM to provide game functionality
+
+Game suggestions:
+-tic-tac-toe
+-hangman
+-guessing game
+-yahtzee

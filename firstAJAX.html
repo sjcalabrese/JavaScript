@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>First Ajax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="demo">
+        <h2>The XMLHttpRequest Object</h2>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
+    <script>
+        function loadDoc(){
+            var xhttp = new XMLHttpRequest();
+            //onreadystatechange is event for when it hears back from server
+            xhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status ==200){
+                    document.getElementById("demo").innerHTML =
+                    xhttp.responseText //what ever was received back from server
+                }
+            };
+                xhttp.open("GET", "ajax_info.aspx", true);//has to be true to be asynchronously
+                xhttp.send();//when it send the request it then triggers onreadystatechange
+                //xhttp.onload = function(){
+                    //alert(xhttp.responseText);
+                }
+        
+    </script>
+</body>
+</html>

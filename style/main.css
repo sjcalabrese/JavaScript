@@ -1,0 +1,28 @@
+#div1, #div2, #div3,#div4, #div5, #div6, #div7, #div8,#div9 {
+    width: 200px;
+    height: 180px;
+    background-color:white;
+    margin: 5px;
+}
+#main-content{
+    text-align: center;
+}
+
+#content-grid{
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    background-color: black;
+    /*(padding: 5px;*/
+    text-align: center;
+  }
+
+#bx1,#bx2,#bx3, #bx4, #bx5, #bx6, #bx7, #bx8,#bx9{
+    width: 199px;
+    height: 179px;
+  }
+
+#buttonx{
+    width: 80px;
+    height:80px;
+    
+}
