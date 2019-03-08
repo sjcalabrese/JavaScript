@@ -1,29 +1,44 @@
+body {
+    height: 100%;
+    text-align: center;
+    
+}
 
+button{
+    text-align: center;
+}
 #div1, #div2, #div3,#div4, #div5, #div6, #div7, #div8,#div9 {
     width: 200px;
     height: 180px;
     background-color:white;
-    margin: 5px;
-    border: orange solid;
+    margin:0px;
+    border: black solid 5px;
+    vertical-align: middle;
+    font-size: 150px;
 }
-#main-content{
-    text-align: center;
-    border: black solid;
+#div1:hover, #div2:hover, #div3:hover,#div4:hover, #div5:hover, #div6:hover, #div7:hover, #div8:hover,#div9:hover{
+    border: orange solid 5px;
 }
 
-#content-grid{
+#main-content{
+    text-align: center;
+       
+}
+
+#board{
     display: inline-grid;
     grid-template-columns: auto auto auto;
     background-color: black;
     /*(padding: 5px;*/
-    text-align: center;
-    border: pink solid;
+    text-align: center
   }
 
-#bx1,#bx2,#bx3, #bx4, #bx5, #bx6, #bx7, #bx8,#bx9{
+.win{
+    background-color: green;
+}
+/*#bx1,#bx2,#bx3, #bx4, #bx5, #bx6, #bx7, #bx8,#bx9{
     width: 199px;
     height: 150px;
-
   }
 
 #buttonx{
@@ -33,4 +48,8 @@
 #buttono{
     width: 80px;
     height: 80px;
+}*/
+
+.win{
+    background-color: green;
 }
