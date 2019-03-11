@@ -34,21 +34,10 @@ button{
   }
 
 .win{
-    background-color: green;
+    
+    color: green;
 }
-/*#bx1,#bx2,#bx3, #bx4, #bx5, #bx6, #bx7, #bx8,#bx9{
-    width: 199px;
-    height: 150px;
-  }
 
-#buttonx{
-    width: 80px;
-    height:80px;  
-}
-#buttono{
-    width: 80px;
-    height: 80px;
-}*/
 
 .win{
     background-color: green;

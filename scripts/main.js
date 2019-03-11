@@ -1,33 +1,37 @@
+//declare local variables
 var boxes;
-var turn = 1;
+var turn = 0;
 var playerTurn;
 
 function init() {
-    console.log("running")
-    boxes = document.querySelectorAll("#board div")
-    playerTurn = document.getElementById("turnbx")
+    console.log("running")//confirmt the game is running in the console log
+    boxes = document.querySelectorAll("#board div") //create a list of the bard div's and assign to boxes
+    playerTurn = document.getElementById("turnbx") //assign the turn header to playerTurn variable
+   /*main function for the tic tac toe game
+   iterates through the array of boxes and then waits for a click
+   */
     for (let i = 0; i < boxes.length; i++) {
         boxes[i].onclick = function () {
-            if (this.innerHTML !== "X" && this.innerHTML !== "O") {
-                if (turn === 0) {
+            if (this.innerHTML !== "X" && this.innerHTML !== "O") { //verifies the box is empty
+                if (turn === 0) { //runs if it is player ones turn
                     console.log(turn);
-                    this.innerHTML = "X";
+                    this.innerHTML = "X"; //Marks an "X" in the box for player 1
                     playerTurn.innerHTML = "Turn = player 2"
-                    getWinner();
-                    turn = 1;
-                } else {
+                    getWinner(); //test to see if the player one
+                    turn = 1; //switch to player 2
+                } else { //run if it is player 2's turn
                     console.log(turn);
-                    this.innerHTML = "O";
+                    this.innerHTML = "O"; //marks an "O" if it is player 2's turn
                     playerTurn.innerHTML = "Turn = Player 1"
-                    getWinner();
-                    turn = 0;
-                } //end nested if else
-            } //end if
-        } // end function
-    } //end for loop
+                    getWinner(); //test for a winner
+                    turn = 0; //switch back to player 1
+                } 
+            } 
+        } 
+    } 
 }
 
-function getWinner() {
+function getWinner() { //assign each div to a box variable
     var box1 = document.getElementById("div1")
     var box2 = document.getElementById("div2")
     var box3 = document.getElementById("div3")
@@ -65,14 +69,14 @@ function getWinner() {
     //top right to bottom left diaginal
 
 }
-//play game
+
 
 
 
 function selectWinnerBoxes(b1, b2, b3) {
-    b1.classList.add("win");
-    b2.classList.add("win");
-    b3.classList.add("win");
+    b1.className = "win"; 
+    b2.className = "win";
+    b3.className = "win";
     playerTurn.innerHTML = b1.innerHTML + " Won, Congrats";
     playerTurn.style.fontSize = "40px";
 }
