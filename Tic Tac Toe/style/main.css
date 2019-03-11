@@ -1,0 +1,41 @@
+body {
+    height: 100%;
+    text-align: center;
+    background-color: aqua;    
+}
+h1 {
+    color:crimson;
+}
+
+button{
+    text-align: center;
+}
+#div1, #div2, #div3,#div4, #div5, #div6, #div7, #div8,#div9 {
+    width: 180px;
+    height: 150px;
+    background-color:blanchedalmond;
+    margin:0px;
+    border: black solid 5px;
+    vertical-align: middle;
+    font-size: 150px;
+}
+#div1:hover, #div2:hover, #div3:hover,#div4:hover, #div5:hover, #div6:hover, #div7:hover, #div8:hover,#div9:hover{
+    border: orange solid 5px;
+}
+
+#main-content{
+    text-align: center;       
+}
+
+#board{
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    padding: 5px;
+    text-align: center
+  }
+
+.win{
+    
+    color: green;
+}
+
