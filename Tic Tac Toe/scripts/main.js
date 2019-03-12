@@ -8,7 +8,7 @@ function init() {
     boxes = document.querySelectorAll("#board div") //create a list of the bard div's and assign to boxes
     playerTurn = document.getElementById("turnbx") //assign the turn header to playerTurn variable
    /*main function for the tic tac toe game
-   iterates through the array of boxes and then waits for a click
+   iterates through the array of boxes and then waits for a click inside a box
    */
     for (let i = 0; i < boxes.length; i++) {
         boxes[i].onclick = function () {
@@ -67,10 +67,16 @@ function getWinner() { //assign each div to a box variable
     if (box3.innerHTML !== "" && box3.innerHTML === box5.innerHTML && box3.innerHTML === box7.innerHTML)
         selectWinnerBoxes(box3, box5, box7)
     //top right to bottom left diaginal
-
+    if(box1.innerHTML !=="" && box2.innerHTML !== "" && box3.innerHTML !== "" && box4.innerHTML !== ""
+    && box5.innerHTML !== "" && box6.innerHTML !== "" && box7.innerHTML !== "" && box8.innerHTML !== ""
+    && box9.innerHTML !== "")
+        draw();
 }
 
-
+function draw(){
+    playerTurn.innerHTML = "DRAW";
+    playerTurn.style.fontSize = "25px";
+}
 
 
 function selectWinnerBoxes(b1, b2, b3) {
