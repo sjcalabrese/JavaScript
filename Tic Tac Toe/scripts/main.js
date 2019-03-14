@@ -1,19 +1,20 @@
 //declare local variables
 var boxes;
-var turn = 0;
+var turn = 0;//determines players turn
 var playerTurn;
 
 function init() {
     console.log("running")//confirmt the game is running in the console log
-    boxes = document.querySelectorAll("#board div") //create a list of the bard div's and assign to boxes
+    boxes = document.querySelectorAll("#board div") //create a list of the board div's and assign to boxes variable
     playerTurn = document.getElementById("turnbx") //assign the turn header to playerTurn variable
    /*main function for the tic tac toe game
-   iterates through the array of boxes and then waits for a click inside a box
+   iterates through the array of boxes creating the onclick event listener
+   then waits for player to click to run the function.
    */
     for (let i = 0; i < boxes.length; i++) {        
         boxes[i].onclick = function () {
 
-            if (this.innerHTML !== "X" && this.innerHTML !== "O" && getWinner() !== true) { //verifies the box is empty
+            if (this.innerHTML !== "X" && this.innerHTML !== "O" && getWinner() !== true) { //verifies the box is empty and that there is no winner
                 if (turn === 0) { //runs if it is player ones turn
                     console.log(turn);
                     this.innerHTML = "X"; //Marks an "X" in the box for player 1
