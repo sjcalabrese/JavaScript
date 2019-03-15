@@ -22,11 +22,15 @@
         function changeColor(){
             document.getElementById("btnClick").style="color: blue"
         }
+        function myfunction(a){
+            alert("Hello there" + ' ' + a);
+        }
     </script>
 </head>
 <body onload="init()">
 
     Name: <input type="text" id="fname">
     <button id="btnClick">Click Me!</button>
+    <button onclick="myfunction('sal')">click me</button>
 </body>
 </html>
