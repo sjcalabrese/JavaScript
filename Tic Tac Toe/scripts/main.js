@@ -1,7 +1,9 @@
-//declare local variables
+//declare variables
 var boxes;
-var turn = 0;//determines players turn
-var playerTurn;
+var turn= 0;//determines players turn
+var playerTur= n; //output to let the players know whose turn it is
+var player1Score = 0;
+var player2Score = 0;
 
 function init() {
     console.log("running")//confirmt the game is running in the console log
@@ -15,19 +17,20 @@ function init() {
         boxes[i].onclick = function () {
 
             if (this.innerHTML !== "X" && this.innerHTML !== "O" && getWinner() !== true) { //verifies the box is empty and that there is no winner
-                if (turn === 0) { //runs if it is player ones turn
+                //if (turn === 0) { //runs if it is player ones turn
                     console.log(turn);
-                    this.innerHTML = "X"; //Marks an "X" in the box for player 1
-                    playerTurn.innerHTML = "Turn = player 2"
+                    this.innerHTML = (turn === 0)? "X":"O"; //Marks an "X" in the box for player 1 or O for player 2
+                    playerTurn.innerHTML = (turn === 0)?"Turn = Player 1":"Turn = player 2";
+                    turn = (turn === 0)?1:0;
                     getWinner(); //test to see if the player one                   
-                    turn = 1; //switch to player 2
-                } else { //run if it is player 2's turn
-                    console.log(turn);
-                    this.innerHTML = "O"; //marks an "O" if it is player 2's turn
-                    playerTurn.innerHTML = "Turn = Player 1"
-                    getWinner(); //test for a winner
-                    turn = 0; //switch back to player 1
-                } 
+                    //turn = 1; //switch to player 2
+                //} else { //run if it is player 2's turn
+                  //  console.log(turn);
+                  //  this.innerHTML = "O"; //marks an "O" if it is player 2's turn
+                  //  playerTurn.innerHTML = "Turn = Player 1"
+                  //  getWinner(); //test for a winner
+                  //  turn = 0; //switch back to player 1
+                
             } 
         }
     } 
