@@ -6,17 +6,28 @@ body {
 
 h1 {
     color: crimson;
+    margin: 0;
 }
 
 button {
     text-align: center;
+    margin: 0;
+}
+
+#scorebox{
+    border: black solid 2px;
+    margin-left:auto;
+    margin-right: auto;
+    background-color: white;
+   
 }
 
 #board {
     display: inline-grid;
     grid-template-columns: auto auto auto;
     padding: 5px;
-    text-align: center
+    text-align: center;
+    margin: 0;
 }
 
 #board div {

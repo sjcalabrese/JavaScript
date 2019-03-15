@@ -14,7 +14,21 @@
     <!--Start the main.js function call-->
     <div id="main-content">
         <h1>Tic Tac Toe</h1>
-        
+        <table id="scorebox">
+            <thead>
+                <tr align=center bgcolor=gray>
+                    <th colspan=2>Score</th>
+                </tr>
+            </thead>
+            <th>Player 1</th>
+            <th>Player 2</th>
+            <tr>
+                <td id="player1">0</td>
+                <td id="player2">0</td>
+            </tr>
+        </table>
+        <button onclick="resetScore()">Reset Score</button>
+        <button onclick="resetgame()">Start New Game</button>
         <h3 id="turnbx">Player X goes first</h3>
         <div id="board">
             <div id="div1"></div>
@@ -28,7 +42,7 @@
             <div id="div9"></div>
         </div>
     </div>
-    <button onclick="resetgame()">reset</button>
+    
 </body>
 
 </html>

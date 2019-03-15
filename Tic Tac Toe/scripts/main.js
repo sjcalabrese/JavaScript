@@ -1,9 +1,10 @@
 //declare variables
 var boxes;
 var turn= 0;//determines players turn
-var playerTur= n; //output to let the players know whose turn it is
-var player1Score = 0;
-var player2Score = 0;
+var playerTurn; //output to let the players know whose turn it is
+var player1Score;
+var player2Score;
+
 
 function init() {
     console.log("running")//confirmt the game is running in the console log
@@ -13,6 +14,10 @@ function init() {
    iterates through the array of boxes creating the onclick event listener
    then waits for player to click to run the function.
    */
+  
+    player1Score = 0;
+    player2Score = 0;
+    updatePlayer();
     for (let i = 0; i < boxes.length; i++) {        
         boxes[i].onclick = function () {
 
@@ -20,8 +25,8 @@ function init() {
                 //if (turn === 0) { //runs if it is player ones turn
                     console.log(turn);
                     this.innerHTML = (turn === 0)? "X":"O"; //Marks an "X" in the box for player 1 or O for player 2
-                    playerTurn.innerHTML = (turn === 0)?"Turn = Player 1":"Turn = player 2";
                     turn = (turn === 0)?1:0;
+                    playerTurn.innerHTML = (turn === 0)?"Turn = Player 1":"Turn = player 2";
                     getWinner(); //test to see if the player one                   
                     //turn = 1; //switch to player 2
                 //} else { //run if it is player 2's turn
@@ -110,9 +115,27 @@ function selectWinnerBoxes(b1, b2, b3) {
     b3.className = "win";
     playerTurn.innerHTML = b1.innerHTML + " Won, Congrats";
     playerTurn.style.fontSize = "25px";
-    
+    if(b1.innerHTML === "X"){
+        player1Score++;
+        ;
+    }else{
+        player2Score++;
+    }
+    updatePlayer();
 }
 
 function resetgame() {
+    for (let i = 0; i < boxes.length; i++){         
+        boxes[i].innerHTML = "";
+        boxes[i].className = "";
+        turn = 0;
+    }
+}
+function resetScore(){
     location.reload();
+}
+
+function updatePlayer() {
+    document.getElementById("player1").innerHTML = player1Score;
+    document.getElementById("player2").innerHTML = player2Score;
 }
