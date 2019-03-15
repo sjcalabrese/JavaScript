@@ -133,6 +133,7 @@ function resetgame() {
 }
 function resetScore(){
     location.reload();
+    
 }
 
 function updatePlayer() {

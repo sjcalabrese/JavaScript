@@ -1,7 +1,8 @@
 body {
     height: 100%;
     text-align: center;
-    background-color: aqua;
+    background-image: url(../images/flooring.jpg);
+    background-repeat: repeat;
 }
 
 h1 {
