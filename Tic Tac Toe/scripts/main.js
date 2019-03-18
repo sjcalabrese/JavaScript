@@ -108,7 +108,6 @@ function draw(){
     playerTurn.style.fontSize = "25px";
 }
 
-
 function selectWinnerBoxes(b1, b2, b3) {
     b1.className = "win"; 
     b2.className = "win";
