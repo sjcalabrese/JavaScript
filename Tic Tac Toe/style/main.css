@@ -14,6 +14,10 @@ button {
     text-align: center;
     margin: 0;
 }
+.tableheader {
+    align-content: center;
+    background-color: gray;
+}
 
 #scorebox{
     border: black solid 2px;
