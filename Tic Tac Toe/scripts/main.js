@@ -1,22 +1,18 @@
-//declare variables
-var boxes;
-var turn= 0;//determines players turn
-var playerTurn; //output to let the players know whose turn it is
-var player1Score;
-var player2Score;
-
 
 function init() {
+    //declare variables
     console.log("running")//confirmt the game is running in the console log
     boxes = document.querySelectorAll("#board div") //create a list of the board div's and assign to boxes variable
     playerTurn = document.getElementById("turnbx") //assign the turn header to playerTurn variable
-   /*main function for the tic tac toe game
+    var turn= 0;//determines players turn
+    player1Score = 0;
+    player2Score = 0;
+
+    /*main function for the tic tac toe game
    iterates through the array of boxes creating the onclick event listener
    then waits for player to click to run the function.
    */
   
-    player1Score = 0;
-    player2Score = 0;
     updatePlayer();
     for (let i = 0; i < boxes.length; i++) {        
         boxes[i].onclick = function () {
@@ -57,43 +53,43 @@ function getWinner() { //assign each div to a box variable
     if (box1.innerHTML !== "" && box1.innerHTML === box2.innerHTML && box1.innerHTML === box3.innerHTML){
         selectWinnerBoxes(box1, box2, box3);
         return true;
-    }
-    //1st row horizontal win
+    }//1st row horizontal win
+    
     if (box4.innerHTML !== "" && box4.innerHTML === box5.innerHTML && box4.innerHTML === box6.innerHTML){
         selectWinnerBoxes(box4, box5, box6);
         return true;
-    }
-    //2nd row horizontal win
+    } //2nd row horizontal win
+   
     if (box7.innerHTML !== "" && box7.innerHTML === box8.innerHTML && box7.innerHTML === box9.innerHTML){
         selectWinnerBoxes(box7, box8, box9)
         return true;
-    }
-    //3rd row horizontal win
+    }//3rd row horizontal win
+    
     if (box1.innerHTML !== "" && box1.innerHTML === box4.innerHTML && box1.innerHTML === box7.innerHTML){
         selectWinnerBoxes(box1, box4, box7);
         return true;
-    }
-    //1 column verticle win
+    }//1 column verticle win
+    
     if (box2.innerHTML !== "" && box2.innerHTML === box5.innerHTML && box2.innerHTML === box8.innerHTML){
         selectWinnerBoxes(box2, box5, box8)
         return true;
-    }
-    //2nd column verticle winner
+    }//2nd column verticle win
+    
     if (box3.innerHTML !== "" && box3.innerHTML === box6.innerHTML && box3.innerHTML === box9.innerHTML){
         selectWinnerBoxes(box3, box6, box9)
         return true;
-    }
-    //3rd column verticle
+    }//3rd column verticle win
+    
     if (box1.innerHTML !== "" && box1.innerHTML === box5.innerHTML && box1.innerHTML === box9.innerHTML){
         selectWinnerBoxes(box1, box5, box9)
         return true;
-    }
-    //top left to bottom right diaginal
+    }//top left to bottom right diagina
+    
     if (box3.innerHTML !== "" && box3.innerHTML === box5.innerHTML && box3.innerHTML === box7.innerHTML){
         selectWinnerBoxes(box3, box5, box7)
         return true;
-    }
-    //top right to bottom left diaginal
+    }//top right to bottom left diaginal
+    
     if(box1.innerHTML !=="" && box2.innerHTML !== "" && box3.innerHTML !== "" && box4.innerHTML !== ""
     && box5.innerHTML !== "" && box6.innerHTML !== "" && box7.innerHTML !== "" && box8.innerHTML !== ""
     && box9.innerHTML !== ""){
