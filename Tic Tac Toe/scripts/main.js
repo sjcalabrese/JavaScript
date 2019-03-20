@@ -99,7 +99,7 @@ function getWinner() { //assign each div to a box variable
     && box9.innerHTML !== ""){
         draw();
         return true;
-    }
+    }//draw
        
 }
 
