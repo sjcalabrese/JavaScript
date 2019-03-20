@@ -112,8 +112,9 @@ function selectWinnerBoxes(b1, b2, b3) {
     b1.className = "win"; 
     b2.className = "win";
     b3.className = "win";
-    playerTurn.innerHTML = b1.innerHTML + " Won, Congrats";
+    playerTurn.innerHTML = b1.innerHTML + " Won, Congrats!!!";
     playerTurn.style.fontSize = "25px";
+    playerTurn.style.color = "darkgreen";
     if(b1.innerHTML === "X"){
         player1Score++;
         ;
@@ -129,6 +130,8 @@ function resetgame() {
         boxes[i].className = "";
         turn = 0;
     }
+    playerTurn.style.color = "black"
+    playerTurn.innerHTML = "Turn = Player 1";
 }
 function resetScore(){
     location.reload();

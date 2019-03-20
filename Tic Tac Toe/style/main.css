@@ -19,10 +19,12 @@ button {
     border: black solid 2px;
     margin-left:auto;
     margin-right: auto;
-    background-color: white;
-   
+    background-color: white;  
 }
 
+#turnbx{
+    font-size: 25px;
+}
 #board {
     display: inline-grid;
     grid-template-columns: auto auto auto;
