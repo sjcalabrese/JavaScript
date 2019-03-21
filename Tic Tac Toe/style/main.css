@@ -14,7 +14,7 @@ button {
     text-align: center;
     margin: 0;
 }
-.tableheader {
+thead {
     align-content: center;
     background-color: gray;
 }
